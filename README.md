@@ -161,7 +161,7 @@ export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 ---
 ---
 
-## 📸 Exemple d’exécution — Analyse automatique de CV
+##  Exemple d’exécution — Analyse automatique de CV
 
 Chargement du PDF → extraction → résumé orienté recrutement  
 Génération d’un profil professionnel court + points forts + sugg. de postes
@@ -171,6 +171,24 @@ Génération d’un profil professionnel court + points forts + sugg. de postes
 </p>
 
 ---
+### Exemple d'exécution interne (Debug Pipeline)
+
+Cet extrait illustre le fonctionnement complet du pipeline lors d’une analyse de document.
+On observe clairement les étapes successives du traitement RAG :
+
+1. **Extraction PDF (Docling)** → conversion en Markdown structuré  
+2. **Chunking** → segmentation du contenu en blocs exploitables  
+3. **Embeddings (Qwen3)** → vectorisation pour la recherche sémantique  
+4. **Retrieval Top-K** → sélection des passages pertinents  
+5. **Classification de la requête** (ici → Résumé CV, confiance = 0.995)  
+6. **Génération finale** → réponse complète basée uniquement sur le document
+
+> Ce log montre que le système comprend le type de tâche demandé, récupère les
+> bons passages, puis génère un résumé structuré et exploitable.
+
+<p align="center">
+  <img src="docs/screenshots/debug_logs.png" width="88%">
+</p>
 
 ##  Données & sécurité
 
