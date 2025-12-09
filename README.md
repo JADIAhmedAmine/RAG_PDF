@@ -300,7 +300,7 @@ Place tes captures d’écran dans `docs/screenshots/` :
 **Ahmed Amine Jadi** — 2025  
 Stage ingénieur — *AtlantaSanad Assurance*
 
-- GitHub : https://github.com/kratosra  
+- GitHub : https://github.com/JADIAhmedAmine
 - LinkedIn : https://www.linkedin.com/in/ahmed-amine-jadi-958010373/  
 - Email : amine_jadon@outlook.fr
 
