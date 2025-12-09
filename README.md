@@ -1,16 +1,35 @@
-# 📄 QwenPDF Insight — Multimodal RAG Pipeline
+# 📄 RAG_PDF — Pipeline RAG multimodal pour l’analyse de PDF (Qwen)
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Project](https://img.shields.io/badge/Multimodal-RAG-purple)
 ![Status](https://img.shields.io/badge/Stage-ATLANTASANAD-orange)
 
-**QwenPDF Insight** est un pipeline **RAG (Retrieval-Augmented Generation)** multimodal pour analyser des **PDF non structurés** (texte, tableaux, graphiques, schémas) et répondre à des questions en **langage naturel**, avec UI Gradio et mécanismes de **cache**.
+**RAG_PDF** est un pipeline **RAG (Retrieval-Augmented Generation)** multimodal pour analyser des **PDF non structurés**  
+(texte, tableaux, graphiques, schémas) et répondre à des questions en **langage naturel**, avec une UI Gradio et des mécanismes de **cache**.
 
-Il combine **Docling** (extraction), **Qwen3** (embeddings + génération), **CLIP** (sélection d’images), et **Qwen-VL** (raisonnement visuel). Tout le traitement est **local** par défaut.
+Il combine **Docling** (extraction), **Qwen3** (embeddings + génération), **CLIP** (sélection d’images) et **Qwen-VL** (raisonnement visuel).  
+Tout le traitement est **local** par défaut.
+
+> **Note de nommage** : le dépôt s’appelle **RAG_PDF**.  
+> Si ton package ou dossier principal s’appelle encore `qwenpdf_insight/`, c’est OK :  
+> garde-le pour l’instant et considère-le comme un nom interne/historique.
 
 ---
 
-## ✨ Fonctionnalités
+## 
+
+Ce projet met en avant une maîtrise complète d’une chaîne **document AI** orientée production :
+
+- **Extraction PDF** réaliste et structurée.
+- **RAG multimodal** (texte + tableaux + figures).
+- **Recherche sémantique** + **reranking** pour la pertinence.
+- **Intégration VLM** pour raisonner sur graphiques/schémas.
+- **Ingénierie solide** : architecture modulaire, caching, logs, UI unifiée.
+
+---
+
+##  Fonctionnalités
 
 - **Extraction PDF robuste** → Markdown (texte + tableaux + *captions d’images*).
 - **Chunking intelligent** conservant tables & légendes.
@@ -22,11 +41,11 @@ Il combine **Docling** (extraction), **Qwen3** (embeddings + génération), **CL
 
 ---
 
-## 🧱 Architecture (vue fonctionnelle)
+## Architecture (vue fonctionnelle)
 
 ![Architecture du pipeline](docs/pipeline.png)
 
-## 🗂️ Graphe de structure du projet
+##  Graphe de structure du projet
 
 ```mermaid
 graph TD
@@ -60,7 +79,7 @@ graph TD
 
 ---
 
-## 📁 Organisation
+## Organisation
 
 ```
 qwenpdf_insight/
@@ -93,7 +112,7 @@ qwenpdf_insight/
 
 ---
 
-## ✅ Prérequis
+##  Prérequis
 
 - **OS** : Linux, macOS, Windows 10/11
 - **Python** : 3.10+
@@ -102,7 +121,7 @@ qwenpdf_insight/
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
 ```bash
 git clone https://github.com/kratosra/qwenpdf_insight.git
@@ -168,7 +187,7 @@ export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
 ---
 
-## 🧩 Caching & perfs
+##  Caching & perfs
 
 | Mode                      | Extraction Docling                     | Cache embeddings | Dossier cache    | VLM Qwen-VL       | Images persistées        |
 |---------------------------|----------------------------------------|------------------|------------------|-------------------|--------------------------|
@@ -180,7 +199,7 @@ export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
 ---
 
-## 🔐 Données & sécurité
+##  Données & sécurité
 
 - Traitement **local** par défaut (pas d’envoi cloud non configuré).  
 - Les PDFs sont renommés par hash dans `data/uploads/`.  
@@ -194,7 +213,7 @@ data/
 
 ---
 
-## 📸 Exemple d’utilisation (placeholders)
+##  Exemple d’utilisation (placeholders)
 
 Place tes captures d’écran dans `docs/screenshots/` :
 
@@ -214,6 +233,6 @@ Stage ingénieur — *AtlantaSanad Assurance*
 
 ---
 
-## 📜 Licence
+##  Licence
 
 MIT — voir `LICENSE`.
