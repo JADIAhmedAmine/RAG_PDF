@@ -83,7 +83,7 @@ qwenpdf_insight/
 
 ```bash
 git clone https://github.com/JADIAhmedAmine/RAG_PDF.git
-cd qwenpdf_insight
+cd RAG_PDF
 python -m venv .venv && source .venv/bin/activate     # PowerShell: .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 ```
