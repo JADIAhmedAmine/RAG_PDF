@@ -11,9 +11,6 @@
 Il combine **Docling** (extraction), **Qwen3** (embeddings + génération), **CLIP** (sélection d’images) et **Qwen-VL** (raisonnement visuel).  
 Tout le traitement est **local** par défaut.
 
-> **Note de nommage** : le dépôt s’appelle **RAG_PDF**.  
-> Si ton package ou dossier principal s’appelle encore `qwenpdf_insight/`, c’est OK :  
-> garde-le pour l’instant et considère-le comme un nom interne/historique.
 
 ---
 
@@ -130,7 +127,7 @@ python scripts/launch_unified.py
 
 ---
 
-## 🔧 Paramètres utiles (sans casser le cache)
+##  Paramètres utiles (sans casser le cache)
 
 - `k_images = 4` — nb d’images passées à Qwen-VL  
 - `min_prob = 0.18` — seuil CLIP  
@@ -260,7 +257,7 @@ On visualise clairement chaque étape du traitement : extraction, chunking, embe
 
 ---
 
-## 📎 📄 Documents PDF utilisés pour les tests
+## 📄 Documents PDF utilisés pour les tests
 
 Pour assurer la reproductibilité complète, voici les fichiers PDF utilisés dans les exemples du README.  
 Ils sont disponibles dans le repository pour permettre à d'autres utilisateurs de tester le pipeline eux-mêmes.
