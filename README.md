@@ -203,7 +203,7 @@ Chargement du PDF → extraction → résumé orienté recrutement
 Génération d’un profil professionnel court + points forts + sugg. de postes
 
 <p align="center">
-  <img src="docs/screenshots/cv_demo.png" width="85%" alt="Analyse automatique de CV"/>
+  <img src="docs/screenshots/demo_cv_analysis.png" width="85%" alt="Analyse automatique de CV"/>
 </p>
 
 ---
