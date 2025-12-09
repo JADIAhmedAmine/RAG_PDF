@@ -268,7 +268,7 @@ Ils sont disponibles dans le repository pour permettre à d'autres utilisateurs 
 | PDF | Contenu | Lien |
 |---|---|---|
 | `PC_Insurers_Filings.pdf` | Tableau réglementaire + choix multiples (Source/Notes/EO) | 🔗 [Télécharger](docs/pdf/PC_Insurers_Filings.pdf) |
-| `Jadi_Amine_CV_2026 (1).pdf` | Graphique multivarié (Support/No Vote/Oppose) | 🔗 [Télécharger](docs/pdf/Jadi_Amine_CV_2026 (1).pdf) |
+| `Jadi_Amine_CV_2026 (1).pdf` | CV_fichier_textuel| 🔗 [Télécharger](docs/pdf/Jadi_Amine_CV_2026(1).pdf) |
 
 
 > Chaque fichier peut être ouvert et analysé directement via l’interface RAG_PDF.
