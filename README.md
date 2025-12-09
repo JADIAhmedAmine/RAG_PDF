@@ -189,6 +189,75 @@ On observe clairement les étapes successives du traitement RAG :
 <p align="center">
   <img src="docs/screenshots/debug_logs.png" width="88%">
 </p>
+---
+
+##  Extraction & analyse ciblée d’un tableau (PDF réel)
+
+Voici un test effectué sur *PC_Insurers_Filings.pdf*.  
+L’objectif était de filtrer un tableau réglementaire selon des critères précis :
+
+ **Question demandée au modèle :**
+
+> À partir du tableau page 1, extraire uniquement les dépôts qui :  
+> • ont une date limite fixée au **3/1**  
+> • sont soumis en **EO (Electronic-Only)**  
+> • en fournissant : **Nom du dépôt | Source | Copies requises | Notes**
+
+ **Résultat généré automatiquement**
+
+<p align="center">
+  <img src="docs/screenshots/table_analysis.png" width="90%">
+</p>
+
+Le modèle a correctement reconstruit les lignes du tableau, filtré les dépôts correspondants à la date **3/1**,  
+identifié que la plupart sont gérés via **envoi électronique (EO)** et a précisé l’origine des exigences (State / NAIC).
+
+**Résumé automatique extrait par le pipeline :**
+
+> Les dépôts attendus au 3/1 sont majoritairement des fichiers EO.  
+> La plupart proviennent des autorités *State level*, avec plusieurs séries répétées, indiquant un flux administratif standardisé.
+---
+
+##  Debug complet — Analyse d’un PDF avec tableau (PC_Insurers_Filings.pdf)
+
+Cette exécution montre le fonctionnement interne du pipeline sur un PDF réel de type réglementaire.  
+On visualise clairement chaque étape du traitement : extraction, chunking, embeddings, indexation, retrieval, classification, génération.
+
+<p align="center">
+  <img src="docs/screenshots/debug_table_anlaysis_log.png" width="90%">
+</p>
+
+###  Déroulement visible dans les logs
+
+| Étape | Détails | Temps |
+|---|---|---|
+| Docling PDF → Markdown | Extraction du tableau + contenu brut | ~229s |
+| Chunking | Segmentation en 27 blocs ≤ 2048 tokens | 0.08s |
+| Embeddings Qwen3 | Génération + vectorisation | ~129s |
+| Index FAISS | Construction instantanée | 0.11s |
+| Retrieval Top-3 | Recherche des lignes pertinentes | 4.2s |
+| Classification de requête | `Résumé`: **0.993** → tâche détectée automatiquement | 19.5s |
+| Réponse finale | Synthèse + format structuré | 256.7s |
+| **Durée complète du pipeline** | 639.6s | ⬅ exécution multimodale lourde |
+
+*Le pipeline identifie automatiquement que la requête correspond à un résumé tabulaire (`classifier_score=0.993`) — preuve qu’il comprend la nature de la tâche.*
+
+---
+
+### Ce que ce log prouve techniquement
+
+| Compétence du système | ✔ Validée |
+|---|:---:|
+| Traitement de PDF complexe | ✔ |
+| Conversion en Markdown + chunks structurés | ✔ |
+| Embeddings + indexation vectorielle | ✔ |
+| Récupération top-k + classification intelligente | ✔ |
+| Résumé automatique exploitable | ✔ |
+
+> 🧠 Ce screenshot est un excellent indicateur pour un reviewer technique ou un recruteur IA.
+
+---
+
 
 ##  Données & sécurité
 
