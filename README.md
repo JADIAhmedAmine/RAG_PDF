@@ -195,6 +195,18 @@ export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 **Clé de cache** : hash **SHA-256** du PDF (géré par `EmbeddingCacheManager`). L’index est **reconstruit** à la volée depuis les embeddings.
 
 ---
+---
+
+## 📸 Exemple d’exécution — Analyse automatique de CV
+
+Chargement du PDF → extraction → résumé orienté recrutement  
+Génération d’un profil professionnel court + points forts + sugg. de postes
+
+<p align="center">
+  <img src="docs/screenshots/cv_demo.png" width="85%" alt="Analyse automatique de CV"/>
+</p>
+
+---
 
 ##  Données & sécurité
 
