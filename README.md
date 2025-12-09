@@ -39,42 +39,6 @@ Ce projet met en avant une maîtrise complète d’une chaîne **document AI** o
 - **UI Gradio unifiée** avec logs, diagnostic JSON et export Markdown.
 - **Caches** séparés par mode + nettoyage auto des images temporaires.
 
----
-
-```mermaid
-graph TD
-  A[RAG_PDF] --> B[app]
-  B --> B1[qwen_interface_unified.py]
-
-  A --> C[pipeline]
-  C --> C1[cache_manager.py]
-  C --> C2[extract]
-  C2 --> C21[extract_with_docling.py]
-  C2 --> C22[extract_with_docling_img.py]
-
-  C --> C3[embedding]
-  C3 --> C31[qwen_embedding.py]
-
-  C --> C4[generation]
-  C4 --> C41[generate_qwen_answer.py]
-
-  C --> C5[multimodal]
-  C5 --> C51[image_qa_pipeline.py]
-
-  A --> D[scripts]
-  D --> D1[launch_gradio.py]
-  D --> D2[launch_gradio_img.py]
-  D --> D3[launch_unified.py]
-
-  A --> E[data]
-  E --> E1[uploads/]
-  E --> E2[markdown/]
-  E --> E3[chunks/]
-  E --> E4[cache/]
-  E --> E5[cache_img/]
-  E --> E6[images/]
-  E --> E7[logs/]
-```
 
 ## Organisation
 
