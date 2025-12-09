@@ -254,10 +254,26 @@ On visualise clairement chaque étape du traitement : extraction, chunking, embe
 | Récupération top-k + classification intelligente | ✔ |
 | Résumé automatique exploitable | ✔ |
 
-> 🧠 Ce screenshot est un excellent indicateur pour un reviewer technique ou un recruteur IA.
+
 
 ---
 
+---
+
+## 📎 📄 Documents PDF utilisés pour les tests
+
+Pour assurer la reproductibilité complète, voici les fichiers PDF utilisés dans les exemples du README.  
+Ils sont disponibles dans le repository pour permettre à d'autres utilisateurs de tester le pipeline eux-mêmes.
+
+| PDF | Contenu | Lien |
+|---|---|---|
+| `PC_Insurers_Filings.pdf` | Tableau réglementaire + choix multiples (Source/Notes/EO) | 🔗 [Télécharger](docs/pdf/PC_Insurers_Filings.pdf) |
+| `Jadi_Amine_CV_2026 (1).pdf` | Graphique multivarié (Support/No Vote/Oppose) | 🔗 [Télécharger](docs/pdf/Jadi_Amine_CV_2026 (1).pdf) |
+
+
+> Chaque fichier peut être ouvert et analysé directement via l’interface RAG_PDF.
+
+---
 
 ##  Données & sécurité
 
