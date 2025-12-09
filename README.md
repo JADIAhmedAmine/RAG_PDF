@@ -41,10 +41,6 @@ Ce projet met en avant une maîtrise complète d’une chaîne **document AI** o
 
 ---
 
-## Architecture (vue fonctionnelle)
-
-![Architecture du pipeline](docs/pipeline.png)
-
 ```mermaid
 graph TD
   A[RAG_PDF] --> B[app]
