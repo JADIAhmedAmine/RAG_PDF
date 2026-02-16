@@ -275,9 +275,8 @@ Ils sont disponibles dans le repository pour permettre à d'autres utilisateurs 
 ##  Données & sécurité
 
 - Traitement **local** par défaut (pas d’envoi cloud non configuré).  
-- Les PDFs sont renommés par hash dans `data/uploads/`.  
-- Pensez à ignorer `data/` dans Git :
-
+- Les PDFs sont renommés par hash dans `data/uploads/`.
+  
 ```gitignore
 data/
 *.log
